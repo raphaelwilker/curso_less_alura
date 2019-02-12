@@ -1,4 +1,7 @@
-.sombra-padrao {
+.sombra-padrao,
+.destaque button,
+.plano button,
+.contato button {
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
 }
 .image-replacement {
@@ -372,6 +375,11 @@ body {
   width: 940px;
   margin: 0 auto;
 }
+@media (max-width: @ponto-de-quebra) {
+  .container {
+    width: 90%;
+  }
+}
 .titulo-secao {
   text-decoration: underline;
   font-size: 2em;
@@ -394,8 +402,18 @@ header {
   width: 100%;
   position: absolute;
 }
+@media (max-width: @ponto-de-quebra) {
+  header {
+    height: auto;
+  }
+}
 header .container {
   position: relative;
+}
+@media (max-width: @ponto-de-quebra) {
+  header .container {
+    position: static;
+  }
 }
 .menu-principal {
   position: absolute;
@@ -449,7 +467,6 @@ header .container {
   border-radius: 2em;
   -o-border-radius: 2em;
   -moz-border-radius: 2em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 .destaque button:hover {
@@ -560,7 +577,6 @@ header .container {
   border-radius: 0.3em;
   -o-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   margin-left: 2em;
 }
 .icone-check,
@@ -647,7 +663,6 @@ textarea {
   border-radius: 0.3em;
   -o-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
 }
 /** Footer **/
 footer {
@@ -732,15 +747,9 @@ footer a {
 .social a[href*="instagram"] {
   background-image: url(../imagens/instagram.png);
 }
-@media (max-width: 980px) {
+@media (max-width: @ponto-de-quebra) {
   .container {
     width: 90%;
-  }
-  header {
-    height: auto;
-  }
-  header .container {
-    position: static;
   }
   header h1 {
     max-width: 50%;
