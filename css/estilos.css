@@ -406,6 +406,15 @@ header {
   header {
     height: auto;
   }
+  header h1 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  header h1 img {
+    max-width: 100%;
+    margin: 0.5em auto;
+    display: block;
+  }
 }
 header .container {
   position: relative;
@@ -422,12 +431,26 @@ header .container {
   font-size: 1.2em;
   font-weight: lighter;
 }
+@media (max-width: @ponto-de-quebra) {
+  .menu-principal {
+    position: static;
+    display: block;
+    text-align: center;
+    width: auto;
+  }
+}
 .menu-principal ul {
   padding-left: 0;
 }
 .menu-principal li {
   display: inline-block;
   width: 5em;
+}
+@media (max-width: @ponto-de-quebra) {
+  .menu-principal li {
+    margin: 0.4em;
+    width: auto;
+  }
 }
 .menu-principal a {
   color: white;
@@ -444,6 +467,12 @@ header .container {
   color: white;
   height: 330px;
   padding-top: 10em;
+}
+@media (max-width: @ponto-de-quebra) {
+  .destaque {
+    font-size: 14px;
+    height: 250px;
+  }
 }
 .destaque p {
   width: 30em;
@@ -614,6 +643,12 @@ header .container {
   display: inline-block;
   vertical-align: top;
 }
+@media (max-width: @ponto-de-quebra) {
+  .post-destaque,
+  .posts-antigos {
+    width: auto;
+  }
+}
 .post-destaque {
   margin-right: 2em;
 }
@@ -746,37 +781,4 @@ footer a {
 }
 .social a[href*="instagram"] {
   background-image: url(../imagens/instagram.png);
-}
-@media (max-width: @ponto-de-quebra) {
-  .container {
-    width: 90%;
-  }
-  header h1 {
-    max-width: 50%;
-    margin: 0 auto;
-  }
-  header h1 img {
-    max-width: 100%;
-    margin: 0.5em auto;
-    display: block;
-  }
-  .menu-principal {
-    position: static;
-    display: block;
-    text-align: center;
-  }
-  .menu-principal li {
-    margin: 0.4em;
-  }
-  .destaque {
-    font-size: 14px;
-    height: 250px;
-  }
-  .menu-principal,
-  .menu-principal li,
-  .post-destaque,
-  .posts-antigos,
-  form {
-    width: auto;
-  }
 }

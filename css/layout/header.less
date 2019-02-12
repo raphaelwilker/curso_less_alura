@@ -7,7 +7,21 @@ header {
   position: absolute;
 
   @media @mobile{
+
     height: auto;
+
+    h1 {
+
+      max-width: 50%;
+      margin: 0 auto;
+
+      img {
+        max-width: 100%;
+        margin: .5em auto;
+        display: block;
+      }
+    }
+
   }
 
   .container {
@@ -16,7 +30,7 @@ header {
     @media @mobile{
       position: static;
     }
-    
+
   }
 }
 
@@ -27,7 +41,16 @@ header {
   top: -.5em;
   font-size: 1.2em;
   font-weight: lighter;
-  
+
+  @media @mobile{
+
+    position: static;
+    display: block;
+    text-align: center;
+    width: auto;
+
+  }
+
   ul {
 
     padding-left: 0;
@@ -38,6 +61,11 @@ header {
 
     display: inline-block;
     width: 5em;
+    
+    @media @mobile{
+      margin: .4em;
+      width: auto;
+    }
 
   }
 
